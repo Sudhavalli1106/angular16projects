@@ -1,0 +1,19 @@
+<div class="card">
+  <!-- Property Binding & Interpolation -->
+  <img [src]="product.image" [alt]="product.name" class="product-image">
+  
+  <h2>{{ product.name }}</h2>
+  <p>Price: ${{ product.price }}</p>
+
+
+  <!-- Attribute Binding -->
+  <p [class.in-stock]="product.inStock">Status: {{ product.inStock ? 'Available' : 'Out of Stock' }}</p>
+
+  <!-- Two-Way Data Binding -->
+  <label>Quantity: </label>
+  <input type="number" [(ngModel)]="quantity" min="1">
+
+  <!-- Event Binding -->
+  <button (click)="addToCart()">Add to Cart</button>
+  
+</div>

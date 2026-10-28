@@ -1,0 +1,15 @@
+<h2>Your Order History</h2>
+<table border="1">
+  <tr>
+    <th>Order ID</th>
+    <th>Product</th>
+    <th>Price</th>
+    <th>Status</th>
+  </tr>
+  <tr *ngFor="let order of orders">
+    <td>{{ order.id }}</td>
+    <td>{{ order.product }}</td>
+    <td>${{ order.price }}</td>
+    <td>{{ order.status }}</td>
+  </tr>
+</table>

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "iphone 5w",
+    "price": 99.99,
+    "image": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%205s/thumbnail.png"
+  },
+  {
+    "id": 2,
+    "name": "Vivo V9",
+    "price": 149.99,
+    "image": "https://cdn.dummyjson.com/products/images/smartphones/Vivo%20V9/thumbnail.png"
+  },
+  {
+    "id": 3,
+    "name": "Oppo K1",
+    "price": 49.99,
+    "image": "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20K1/thumbnail.png"
+  }
+]

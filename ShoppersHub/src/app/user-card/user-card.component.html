@@ -1,0 +1,19 @@
+<!-- user-card.component.html -->
+<div class="user-card-list">
+  <mat-card *ngFor="let user of users">
+    <mat-card-header>
+      <mat-card-title>{{ user.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image height="200px" width="175px" [src]="user.profilePicture" alt="Profile picture" />
+    <mat-card-content>
+      <p>Click the button below to view more details about {{ user.name }}.</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- <button mat-raised-button color="primary" (click)="viewDetails(user)"> -->
+        <!--  <button mat-raised-button color="accent" (click)="viewDetails(user)"> -->
+           <button mat-raised-button color="warn" (click)="viewDetails(user)">
+        View Details
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

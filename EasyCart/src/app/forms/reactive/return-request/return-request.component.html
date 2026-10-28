@@ -1,0 +1,33 @@
+<form [formGroup]="returnForm" (ngSubmit)="submitReturnRequest()">
+  <label for="orderId">Order ID:</label>
+  <input id="orderId" formControlName="orderId" />
+  <p *ngIf="returnForm.controls['orderId'].touched && returnForm.controls['orderId'].invalid">
+    ⚠ Order ID is required.
+  </p>
+
+  <label for="reason">Reason for Return:</label>
+  <select id="reason" formControlName="reason">
+    <option value="">Select</option>
+    <option value="damaged">Damaged</option>
+    <option value="wrongItem">Wrong Item</option>
+  </select>
+  <p *ngIf="returnForm.controls['reason'].touched && returnForm.controls['reason'].invalid">
+    ⚠ Please select a reason.
+  </p>
+
+  <label for="comments">Comments (Optional):</label>
+  <textarea id="comments" formControlName="comments"></textarea>
+  <p *ngIf="returnForm.controls['comments'].touched && returnForm.controls['comments'].invalid">
+    ⚠ Max 200 characters allowed.
+  </p>
+
+  <button type="submit" [disabled]="returnForm.invalid">Submit Return Request</button>
+</form>
+
+<!-- Show success message only when the form is submitted -->
+<div *ngIf="submitted" style="color:black">
+  <h3>Return Request Submitted Successfully</h3>
+  <p><strong>Order ID:</strong> {{ returnForm.value.orderId }}</p>
+  <p><strong>Reason:</strong> {{ returnForm.value.reason }}</p>
+  <p><strong>Comments:</strong> {{ returnForm.value.comments }}</p>
+</div>

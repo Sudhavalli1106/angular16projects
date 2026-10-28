@@ -1,0 +1,12 @@
+<div class="product-card">
+  <h2>{{ product.name | uppercase }}</h2> <!-- Uppercase Pipe -->
+  
+  <p>Price: {{ product.price | currency:'EUR' }}</p> <!-- Currency Pipe -->
+  <!-- price.addCurrency('eur') -->
+  
+  <p>Discount: {{ product.discount | percent }}</p> <!-- Percent Pipe -->
+
+  <p>Release Date: {{ product.releaseDate | date:'mediumDate' }}</p> <!-- Date Pipe -->
+
+  <p>Description: {{ product.description | truncate:30 }}</p> <!-- Custom Pipe -->
+</div>

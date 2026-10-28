@@ -1,0 +1,13 @@
+<h2>Product List</h2>
+<div style="display: flex; gap: 10px;">
+  <div *ngFor="let product of products" class="product-card">
+    <h3>{{ product.name }}</h3>
+    <p>Price: ${{ product.price }}</p>
+    <button (click)="addToCart(product)">Add to Cart</button>
+  </div>
+</div>
+
+<hr>
+
+<!-- Cart Component (Passing cartItems as Input) -->
+<app-cart [cartItems]="cart"></app-cart>

@@ -1,0 +1,12 @@
+<h3>Shopping Cart</h3>
+<ul *ngIf="cartItems.length > 0; else emptyCart">
+  <li *ngFor="let item of cartItems">
+    {{ item.name }} - ${{ item.price }}
+  </li>
+</ul>
+
+<p *ngIf="cartItems.length > 0"><strong>Total: ${{ totalPrice }}</strong></p>
+
+<ng-template #emptyCart>
+  <p>No items in the cart.</p>
+</ng-template>

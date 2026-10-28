@@ -1,0 +1,12 @@
+<h2>Product List</h2>
+<div style="display: flex; gap: 10px;">
+  <div *ngFor="let product of products">
+    <!-- <app-product-item></app-product-item> -->
+    <app-product-item [product]="product" (addToCart)="handleAddToCart($event)"></app-product-item>
+  </div>
+</div>
+
+<h2>Shopping Cart</h2>
+<ul>
+  <li *ngFor="let item of cart">{{ item.name }} - ${{ item.price }}</li>
+</ul>

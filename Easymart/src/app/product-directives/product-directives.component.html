@@ -1,0 +1,25 @@
+<h1>Structural & Custom directive</h1>
+<div class="product-list">
+  <h2>Product List</h2>
+
+  <div *ngFor="let p of products"  class="product-item" appHighlight >
+    <h3>{{ p.name }}</h3>
+    <p >Price: {{ p.price | currency:'USD' }}</p>
+
+    <p>
+      {{ p.stock > 0 ? 'In Stock' : 'Out of Stock' }}
+    </p>
+  </div>
+</div>
+<hr/> 
+<!-- <h1>Attribute Directive</h1>  
+
+ <div *ngFor="let product of products" class="product-item" >
+     <h3>{{ product.name }}</h3>
+<p [ngClass]="{ 'in-stock': product.stock > 0, 'out-of-stock': product.stock === 0 }">
+  {{ product.stock > 0 ? 'In Stock' : 'Out of Stock' }}
+</p>
+<p [ngStyle]="{ 'color': product.stock > 0 ? 'green' : 'red' }">
+  {{ product.stock > 0 ? 'Available' : 'Out of Stock' }}
+</p>
+</div> -->
